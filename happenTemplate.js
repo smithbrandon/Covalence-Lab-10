@@ -95,6 +95,9 @@ var library = (function() {
 				return String(d.getHours());
 			},
 			TwelveHour: function() {
+				if(d.getHours()%12 === 0){
+					return String(12)
+				}
 				return String(d.getHours()%12);
 			},
 			AMPM: (function() {
